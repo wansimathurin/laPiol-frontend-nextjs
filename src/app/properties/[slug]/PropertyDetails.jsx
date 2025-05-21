@@ -21,7 +21,8 @@ import {
   Bell,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
+import { MapContainer, TileLayer, useMap,Marker,Popup } from 'react-leaflet'
+import MapView from "./MapView";
 const PropertyDetails = ({ property }) => {
   const [mainImage, setMainImage] = useState(property?.xl_picture_url);
   const otherImages = [
@@ -186,6 +187,10 @@ const defaultClassNames = getDefaultClassNames();
         </div>
          
             <Separator />
+             <div className="w-full h-[500px] overflow-hidden ring ring-gray-500 my-5">
+             <MapView property={property}/>
+             </div>
+
         </div>
       </div>
     </div>
