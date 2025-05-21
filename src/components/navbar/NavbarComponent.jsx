@@ -50,6 +50,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ModeToggle } from "@/components/navbar/ModeToggle"
+import Link from "next/link";
 
 const NavbarComponent = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -137,9 +138,9 @@ const NavbarComponent = () => {
     <div className="flex-col justify-between fixed top-0 z-50 bg-background items-center w-full shadow-md">
       {/* top nav */}
       <div className="flex justify-between items-center px-4 py-5 border-b border-gray-300">
-              <div className="font-bold text-2xl">
+              <Link href="/" className="font-bold text-2xl cursor-pointer">
                   <img src="/logo.png" width="140px"/>
-        </div>
+        </Link>
 
         <div className="flex flex-col gap-3 items-center flex-1">
           {!isScrolled && (

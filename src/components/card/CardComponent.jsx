@@ -1,23 +1,26 @@
 'use client'
 import React, { useState } from 'react';
 import { Star } from "lucide-react";
+import Link from 'next/link';
 
 const CardComponent = ({ property }) => {
   const [imageError, setImageError] = useState(false);
   const rate = (property?.review_scores_rating * 5) / 100;
   if (!property?.xl_picture_url || imageError) return null;
+  const customSlug = property.name.toLowerCase().split(" ").join("-")
+
 
   return (
     <div className='flex flex-col gap-4 h-[450px] w-[340px]'>
       {/* image area */}
-      <div className="h-[350px] w-full cursor-pointer rounded-3xl bg-primary flex items-center justify-center overflow-hidden">
+      <Link href={`/properties/${customSlug}`} className="h-[350px] w-full cursor-pointer rounded-3xl bg-primary flex items-center justify-center overflow-hidden">
         <img
           src={property?.xl_picture_url}
           className="h-full w-full object-cover"
           alt="Property"
           onError={() => setImageError(true)}
         />
-      </div>
+      </Link>
       {/* image area end */}
   
       <div className="flex-col px-2">
