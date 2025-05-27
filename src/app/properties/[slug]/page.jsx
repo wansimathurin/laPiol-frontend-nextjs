@@ -1,6 +1,6 @@
 import React from "react";
 import PropertyDetails from "./PropertyDetails";
-import { Properties } from "@/data/properties";
+import { Properties } from "../../../data/properties";
 
 const Page = async ({ params }) => {
   const { slug } = params;

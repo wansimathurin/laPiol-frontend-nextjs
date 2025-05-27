@@ -6,9 +6,9 @@ import {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
-} from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+} from "../../../components/ui/carousel";
+import { Button } from "../../../components/ui/button";
+import { Calendar } from "../../../components/ui/calendar";
 import { DayPicker, getDefaultClassNames } from "react-day-picker";
 import "react-day-picker/style.css";
 import {
@@ -26,7 +26,7 @@ import {
   LampDesk,
   Bell,
 } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "../../../components/ui/separator";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 import MapView from "./MapView";
 const PropertyDetails = ({ property }) => {

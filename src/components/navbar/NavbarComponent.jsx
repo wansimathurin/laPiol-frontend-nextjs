@@ -48,8 +48,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { ModeToggle } from "@/components/navbar/ModeToggle"
+} from "../../components/ui/dropdown-menu"
+import { ModeToggle } from "../../components/navbar/ModeToggle"
 import Link from "next/link";
 
 const NavbarComponent = () => {

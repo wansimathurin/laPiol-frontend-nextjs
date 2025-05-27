@@ -1,9 +1,9 @@
 'use client'
 import React, { useState,useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import CardComponent from "@/components/card/CardComponent";
-import {Properties} from "@/data/properties"
-import SkeletonCardComponent from "@/components/skeletonCard/SkeletonCardComponent";
+
+import CardComponent from "../components/card/CardComponent";
+import {Properties} from "../data/properties"
+import SkeletonCardComponent from "../components/skeletonCard/SkeletonCardComponent";
 
 export default function Home() {
   const [isCardPresent, setIsCardPresent] = useState(false)
